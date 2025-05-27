@@ -65,7 +65,7 @@ export default {
      * PUBLIC_INTERFACE
      * Handles a player move, updates the board and game state.
      */
-    function handleCellClick(index) {
+    function handleCellClick(index: number) {
       if (gameStatus.value !== "playing" || board.value[index]) return;
       board.value[index] = currentPlayer.value;
       if (checkWin(currentPlayer.value)) {
@@ -82,7 +82,7 @@ export default {
      * PUBLIC_INTERFACE
      * Checks if the given player has a winning combination.
      */
-    function checkWin(player) {
+    function checkWin(player: string) {
       return winLines.some(line =>
         line.every(i => board.value[i] === player)
       );
