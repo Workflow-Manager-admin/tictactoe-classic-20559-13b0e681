@@ -29,8 +29,8 @@
   </div>
 </template>
 
-<script>
-import { ref, computed } from "vue"
+<script lang="ts">
+import { ref } from "vue"
 
 /**
  * PUBLIC_INTERFACE
